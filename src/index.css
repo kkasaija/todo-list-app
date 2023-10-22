@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* applies background to the body tag */
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-purple-300 via-blue-300 to-pink-500;
+  }
+}
