@@ -19,9 +19,10 @@ const AddTodo = () => {
           name="input"
           value={input}
           required
-          onChange={(e) => setInput(e.target.value)}
+          onInput={(e) => setInput(e.target.value)}
           className="my-4 mr-2 w-1/2 border rounded outline-0 py-1 text-sm px-1"
-          placeholder="add a todo item"
+          placeholder="Add Todo Task"
+          maxLength={50}
         />
         <button
           type="submit"
