@@ -26,11 +26,8 @@ const todoSlice = createSlice({
 
     //Update todo
     updateTodo: (state, action) => {
-      const todo = state.todos.find((todo) => todo.id === action.payload);
-      if (todo) {
-        todo.text = action.payload;
-      }
-      return todo;
+      const todo = state.todos.find((todo) => todo.id === action.payload.id);
+      todo.text = todo ? action.payload.text : "";
     },
 
     //Toggle todo state
