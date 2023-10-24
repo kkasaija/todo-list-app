@@ -4,7 +4,7 @@ import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto">
       <AddTodo />
       <TodoList />
     </div>
