@@ -22,7 +22,7 @@ const AddTodo = () => {
           onInput={(e) => setInput(e.target.value)}
           className="my-4 mr-2 w-1/2 border rounded outline-0 py-1 text-sm px-1"
           placeholder="Add Todo Task"
-          maxLength={50}
+          maxLength={20}
         />
         <button
           type="submit"

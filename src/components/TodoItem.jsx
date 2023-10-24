@@ -20,7 +20,7 @@ const TodoItem = ({ todo }) => {
       {edit ? (
         <EditTodo taskToEdit={todo} cancel={ handleCancel} />
       ) : (
-        <li className="flex justify-between items-center border-b w-full">
+        <li className="flex justify-between items-center border-b mx-2 py-2">
           <div className="flex justify-start items-center">
             <input
               type="checkbox"
@@ -41,14 +41,14 @@ const TodoItem = ({ todo }) => {
           </div>
           <div className="flex justify-end items-center">
             <button
-              className="bg-blue-600 hover:bg-blue-800 text-xs text-white font-bold py-1 px-2 rounded my-2 mx-2"
+              className="bg-blue-600 hover:bg-blue-800 text-xs text-white font-bold py-1 px-2 rounded ms-2"
               onClick={handleEdit}
             >
               EDIT
             </button>
             <button
               onClick={() => dispatch(deleteTodo(todo.id))}
-              className="bg-red-600 hover:bg-red-700 text-xs text-white font-bold py-1 px-2 rounded my-2 mx-2"
+              className="bg-red-600 hover:bg-red-700 text-xs text-white font-bold py-1 px-2 rounded ms-2"
             >
               DELETE
             </button>
