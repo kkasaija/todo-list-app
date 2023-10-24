@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const EditTodo = ({ taskToEdit, cancel }) => {
   const [update, setUpdate] = useState({ ...taskToEdit });
-  console.log(update);
   const dispatch = useDispatch();
 
   const updateTodoHandler = (e) => {
