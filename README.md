@@ -39,7 +39,6 @@
   <summary>Client</summary>
   <ul>
     <li><a href="https://react.dev/">Reactjs</a></li>
-    <li><a href="https://vitejs.dev/">Vitejs</a></li>
     <li><a href="https://redux-toolkit.js.org/">@reduxjs/toolkit</a></li>
     <li><a href="https://tailwindcss.com/">Tailwind css</a></li>
   </ul>

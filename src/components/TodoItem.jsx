@@ -20,7 +20,7 @@ const TodoItem = ({ todo }) => {
       {edit ? (
         <EditTodo taskToEdit={todo} cancel={ handleCancel} />
       ) : (
-        <li className="flex justify-between items-center border-b mx-2 py-2">
+        <li className="flex flex-wrap justify-between items-center border-b mx-2 py-2">
           <div className="flex justify-start items-center">
             <input
               type="checkbox"
