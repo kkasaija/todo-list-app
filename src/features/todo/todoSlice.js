@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import persistData from "./localStorage"
+import persistData from "./localStorage";
 
 //get todos from localstorage
 const todos =
@@ -25,22 +25,16 @@ const todoSlice = createSlice({
       //add todo to store
       state.todos.push(todo);
       //save array of todos in localstorage
-      // localStorage.setItem(
-      //   "todos",
-      //   JSON.stringify(state.todos.map((todo) => todo))
-      // );
-      persistData(state, "todos")
+      // localStorage.setItem("todos",JSON.stringify(state.todos.map((todo) => todo)));
+      persistData(state, "todos");
     },
 
     //Delete todo
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
       //save array of todos in localstorage
-      // localStorage.setItem(
-      //   "todos",
-      //   JSON.stringify(state.todos.map((todo) => todo))
-      // );
-      persistData(state, "todos")
+      // localStorage.setItem("todos",JSON.stringify(state.todos.map((todo) => todo)));
+      persistData(state, "todos");
     },
 
     //Update todo
@@ -48,11 +42,8 @@ const todoSlice = createSlice({
       const todo = state.todos.find((todo) => todo.id === action.payload.id);
       todo.text = todo ? action.payload.text : "";
       //save array of todos in localstorage
-      // localStorage.setItem(
-      //   "todos",
-      //   JSON.stringify(state.todos.map((todo) => todo))
-      // );
-      persistData(state, "todos")
+      // localStorage.setItem("todos",JSON.stringify(state.todos.map((todo) => todo)));
+      persistData(state, "todos");
     },
 
     //Toggle todo state
@@ -60,15 +51,20 @@ const todoSlice = createSlice({
       const todo = state.todos.find((todo) => todo.id === action.payload);
       todo.completed = todo ? !todo.completed : "";
       //save array of todos in localstorage
-      // localStorage.setItem(
-      //   "todos",
-      //   JSON.stringify(state.todos.map((todo) => todo))
-      // );
-      persistData(state, "todos")
+     // localStorage.setItem("todos",JSON.stringify(state.todos.map((todo) => todo)));
+      persistData(state, "todos");
+    },
+
+    //Delete all todos
+    deleteAllTodos: (state) => {
+      state.todos = [];
+
+      // localStorage.setItem("todos",JSON.stringify(state.todos.map((todo) => todo)));
+      persistData(state, "todos");
     },
   },
 });
 
 const { actions, reducer } = todoSlice;
-export const { addTodo, deleteTodo, updateTodo, toggleTodo } = actions;
+export const { addTodo, deleteTodo, updateTodo, toggleTodo, deleteAllTodos } = actions;
 export default reducer;
